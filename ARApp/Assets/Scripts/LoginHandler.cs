@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,6 +12,7 @@ public class LoginHandler: MonoBehaviour
     [SerializeField] private TMP_InputField passwordInput;
     [SerializeField] private Button loginButton;
     [SerializeField] private TMP_Text errorText;
+    [SerializeField] private Button registerButton;
 
 
     private string emailAddress;
@@ -22,36 +22,40 @@ public class LoginHandler: MonoBehaviour
     private void Start()
     {
         Screen.orientation = ScreenOrientation.Portrait;
+        loginButton.onClick.AddListener(Login_Attempt); //when the login button is clicked
+        registerButton.onClick.AddListener(Register);
     }
 
 
-    public void Login_Attempt()
+    private void Register()
     {
-        loginButton.onClick.AddListener(() => //when the login button is clicked
-        {
-            emailAddress = emailInput.text;
-            password = passwordInput.text;
+        SceneManager.LoadScene("RegisterScene");
+    }
 
-            // checks if username and password are valid
-            if (ValidateCredentials(emailAddress, password))
-            {
-                Debug.Log("Login Successful");
-                SceneManager.LoadScene("HomeScreen");
-                // load next scene or do other actions here
-            }
-            else
-            {
-                Debug.Log("Login Failed");
-                errorText.enabled = true;
-                // show error message or do other actions here
-            }
-        });
+
+    private void Login_Attempt()
+    {
+        emailAddress = emailInput.text;
+        password = passwordInput.text;
+
+        // checks if username and password are valid
+        if (ValidateCredentials(emailAddress, password))
+        {
+            SceneManager.LoadScene("HomeScreen");
+            // load next scene or do other actions here
+        }
+        else
+        {
+            errorText.enabled = true;
+            // show error message or do other actions here
+        }
     }
 
     private bool ValidateCredentials(string username, string password)
     {
         // replace this with user login
         //Link up to database of user data
+
         return username == "admin" && password == "password";
     }
 }

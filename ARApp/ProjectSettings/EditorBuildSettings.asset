@@ -11,4 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeScreen.unity
     guid: bcb32c2d45f550340a43623497a8589e
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/RegisterScene.unity
+    guid: f497a3e282c51624799ca4259e9d4fd2
+  - enabled: 1
+    path: Assets/Scenes/ARScene.unity
+    guid: aa5f19697e54cdd4bb8a53f2d47a5fa7
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 2cac240d1ac8f13408a94709aa85009b, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2507bed62d312764a8ad79df75eff526, type: 2}
