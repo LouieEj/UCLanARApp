@@ -56,22 +56,22 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ARLocation\Editor\LocationPropertyDataDrawer.cs" />
-    <Compile Include="Assets\ARLocation\Editor\ARLocationManagerInspector.cs" />
-    <Compile Include="Assets\ARLocation\Editor\ARLocationEditorConfigManager.cs" />
-    <Compile Include="Assets\ARLocation\Editor\ConditionalPropertyDrawer.cs" />
     <Compile Include="Assets\ARLocation\Editor\LocationPathInspector.cs" />
     <Compile Include="Assets\ARLocation\Mapbox Routes\Editor\RouteWaypointPropertyDrawer.cs" />
-    <Compile Include="Assets\ARLocation\Editor\DefineSymbols.cs" />
-    <Compile Include="Assets\ARLocation\Editor\ARLocationConfigInspector.cs" />
-    <Compile Include="Assets\ARLocation\Editor\GameObjectMenuItems.cs" />
-    <Compile Include="Assets\ARLocation\Editor\ARLocationProviderInspector.cs" />
-    <Compile Include="Assets\ARLocation\Editor\OverrideAltitudeDataDrawer.cs" />
-    <Compile Include="Assets\ARLocation\Editor\DefineSymbolsManager.cs" />
-    <Compile Include="Assets\ARLocation\Mapbox Routes\Editor\RouteSettingsPropertyDrawer.cs" />
+    <Compile Include="Assets\ARLocation\Editor\ARLocationManagerInspector.cs" />
     <Compile Include="Assets\ARLocation\Mapbox Routes\Editor\CustomRouteInspector.cs" />
-    <Compile Include="Assets\ARLocation\Mapbox Routes\Editor\GameObjectMenuItems.cs" />
     <Compile Include="Assets\ARLocation\Editor\ARLocationOrientationInspector.cs" />
+    <Compile Include="Assets\ARLocation\Editor\GameObjectMenuItems.cs" />
+    <Compile Include="Assets\ARLocation\Editor\ARLocationConfigInspector.cs" />
+    <Compile Include="Assets\ARLocation\Editor\DefineSymbolsManager.cs" />
+    <Compile Include="Assets\ARLocation\Editor\OverrideAltitudeDataDrawer.cs" />
+    <Compile Include="Assets\ARLocation\Mapbox Routes\Editor\RouteSettingsPropertyDrawer.cs" />
+    <Compile Include="Assets\ARLocation\Mapbox Routes\Editor\GameObjectMenuItems.cs" />
+    <Compile Include="Assets\ARLocation\Editor\ARLocationProviderInspector.cs" />
+    <Compile Include="Assets\ARLocation\Editor\ConditionalPropertyDrawer.cs" />
+    <Compile Include="Assets\ARLocation\Editor\ARLocationEditorConfigManager.cs" />
+    <Compile Include="Assets\ARLocation\Editor\DefineSymbols.cs" />
+    <Compile Include="Assets\ARLocation\Editor\LocationPropertyDataDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

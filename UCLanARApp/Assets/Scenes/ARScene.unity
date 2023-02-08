@@ -307,9 +307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocationProviderSettings:
-    TimeBetweenUpdates: 2
-    MinDistanceBetweenUpdates: 0
-    AccuracyRadius: 25
+    TimeBetweenUpdates: 5
+    MinDistanceBetweenUpdates: 5
+    AccuracyRadius: 10
     MaxNumberOfUpdates: 0
   MockLocationData: {fileID: 0}
   MaxWaitTime: 200
@@ -339,8 +339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8509790efa844279ea4b7b19529fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
-  WaitForARTrackingToStart: 1
+  Camera: {fileID: 1564728964}
+  WaitForARTrackingToStart: 0
   RestartWhenARTrackingIsRestored: 0
   SetTargetFrameRateTo60Mhz: 1
   DebugMode: 0
@@ -368,10 +368,10 @@ MonoBehaviour:
   MaxNumberOfUpdates: 4
   AverageCount: 150
   UseRawUntilFirstAverage: 1
-  MovementSmoothingFactor: 0.015
+  MovementSmoothingFactor: 0.4
   TrueNorthOffset: 0
   ApplyCompassTiltCompensationOnAndroid: 1
-  LowPassFilterFactor: 0.9
+  LowPassFilterFactor: 1
   OnOrientationUpdated:
     m_PersistentCalls:
       m_Calls: []
@@ -457,8 +457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4966719baa26e4b0e8231a24d9bd491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FocusMode: 1
-  m_LightEstimationMode: 0
+  m_FocusMode: -1
+  m_LightEstimationMode: -1
   m_AutoFocus: 1
   m_LightEstimation: 0
   m_FacingDirection: 1
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520bb47c46cf8624fafb307b7d1b862a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1564728964}
 --- !u!4 &2004074964
 Transform:
   m_ObjectHideFlags: 0
