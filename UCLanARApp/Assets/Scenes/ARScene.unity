@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5e11077e489453a9cbcfff72c5a9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxNumberOfUpdates: 4
+  MaxNumberOfUpdates: 0
   AverageCount: 150
   UseRawUntilFirstAverage: 1
   MovementSmoothingFactor: 0.4
@@ -627,7 +627,7 @@ MonoBehaviour:
           AltitudeMode: 0
           Label: 
         Query: 
-      CustomRoute: {fileID: 11400000, guid: bf4bcdad98adc344e8242fbb781afe4b, type: 2}
+      CustomRoute: {fileID: 11400000, guid: 26ad44e6f0468c540b8ae80131d5f33a, type: 2}
     LoadRouteAtStartup: 1
     GroundHeight: 1.4
     OnMapboxRouteLoadError:
