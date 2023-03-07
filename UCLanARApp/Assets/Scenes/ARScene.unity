@@ -340,9 +340,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 1564728964}
-  WaitForARTrackingToStart: 0
+  WaitForARTrackingToStart: 1
   RestartWhenARTrackingIsRestored: 0
-  SetTargetFrameRateTo60Mhz: 1
+  SetTargetFrameRateTo60Mhz: 0
   DebugMode: 0
   OnTrackingStarted:
     m_PersistentCalls:
@@ -368,10 +368,10 @@ MonoBehaviour:
   MaxNumberOfUpdates: 4
   AverageCount: 150
   UseRawUntilFirstAverage: 1
-  MovementSmoothingFactor: 0.4
+  MovementSmoothingFactor: 0.015
   TrueNorthOffset: 0
   ApplyCompassTiltCompensationOnAndroid: 1
-  LowPassFilterFactor: 1
+  LowPassFilterFactor: 0.9
   OnOrientationUpdated:
     m_PersistentCalls:
       m_Calls: []
