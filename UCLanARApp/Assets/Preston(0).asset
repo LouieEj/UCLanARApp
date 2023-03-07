@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ef57f122164deba0f4502244ca1ae, type: 3}
+  m_Name: Preston(0)
+  m_EditorClassIdentifier: 
+  Name: UCLAN Preston Route
+  Points:
+  - Location:
+      Latitude: 53.76192617395485
+      Longitude: -2.707491275007703
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
+    Name: Starting Point
+    Instruction: Start Here! Go to C&T Building
+  - Location:
+      Latitude: 53.76228206296722
+      Longitude: -2.70784248106384
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.7632872740517
+      Longitude: -2.708648469398543
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
+    Name: C&T Building
+    Instruction: C&T Building
+  - Location:
+      Latitude: 53.76331133318882
+      Longitude: -2.708506894584741
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.76316212761419
+      Longitude: -2.708362900005291
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
+    Name: 
+    Instruction: Walk up to the Library
+  - Location:
+      Latitude: 53.76345004814456
+      Longitude: -2.707157493010012
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
+    Name: Library
+    Instruction: Library!
+  - Location:
+      Latitude: 53.76353255786955
+      Longitude: -2.706794257908874
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.76493046196894
+      Longitude: -2.707763932598009
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.76508304807432
+      Longitude: -2.707168034430019
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
+    Name: Medical School
+    Instruction: The Medical School!
+  - Location:
+      Latitude: 53.76523839312351
+      Longitude: -2.706565369903545
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
+    Name: Harrington Building
+    Instruction: Harrington Building!
+  - Location:
+      Latitude: 53.76425238573417
+      Longitude: -2.707114583766164
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.7627685852493
+      Longitude: -2.706074556224616
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.76252002662716
+      Longitude: -2.707048197955855
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
+    Name: Student Centre
+    Instruction: The Student Centre!
+  - Location:
+      Latitude: 53.7622133802054
+      Longitude: -2.70707716329736
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.76189512230248
+      Longitude: -2.70713470329104
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.76144021135718
+      Longitude: -2.706706530138566
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 0
+    Name: 
+    Instruction: 
+  - Location:
+      Latitude: 53.76137878799714
+      Longitude: -2.706889088572566
+      Altitude: 0
+      AltitudeMode: 0
+      Label: 
+    IsStep: 1
+    Name: Harris Building
+    Instruction: Harris Building! End of Tour!
+  SceneViewScale: 1
