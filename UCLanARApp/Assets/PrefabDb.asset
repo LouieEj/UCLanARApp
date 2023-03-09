@@ -13,5 +13,15 @@ MonoBehaviour:
   m_Name: PrefabDb
   m_EditorClassIdentifier: 
   Entries:
-  - MeshId: Test
-    Prefab: {fileID: 1978121811755991796, guid: 329ac3a0f27be1d4d8587bf43c0deb78, type: 3}
+  - MeshId: CTBuilding
+    Prefab: {fileID: 7052933525305881555, guid: f24dda7121bb6a04f8be52888e67d370, type: 3}
+  - MeshId: Library
+    Prefab: {fileID: 4737564787863230220, guid: f0c662f3e3f702a4c80522870c9a77ce, type: 3}
+  - MeshId: MedicalSchool
+    Prefab: {fileID: 3558225997160259697, guid: 96aa38120657570458acec97b654adaf, type: 3}
+  - MeshId: HarringtonBuilding
+    Prefab: {fileID: 4205727226250819792, guid: c7fcaccd7858bba4a922964fe10eac5b, type: 3}
+  - MeshId: StudentCentre
+    Prefab: {fileID: 4130137145034648197, guid: 30a0fd8c051246242af00a4f29673230, type: 3}
+  - MeshId: HarrisBuilding
+    Prefab: {fileID: 3323263061036315677, guid: be9ea8c75b2ed6442beaba3a015e2a62, type: 3}
