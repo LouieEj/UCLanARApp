@@ -27,7 +27,7 @@ public class RegisterHandler : MonoBehaviour
         registerButton.onClick.AddListener(Register);
         loginButton.onClick.AddListener(Login);
 
-        string filePath = Application.dataPath + "/database.csv";
+        string filePath = Path.Combine(Application.persistentDataPath, "database.csv");
         StreamReader reader = new StreamReader(filePath);
         while (!reader.EndOfStream)
         {
@@ -75,7 +75,7 @@ public class RegisterHandler : MonoBehaviour
                 }
                 else
                 {
-                    string filePath = Application.dataPath + "/database.csv";
+                    string filePath = Path.Combine(Application.persistentDataPath, "database.csv");
                     string colourBlindSetting = "0";
                     string dyslexicSetting = "FALSE";
                     StreamWriter writer = new StreamWriter(filePath, true);

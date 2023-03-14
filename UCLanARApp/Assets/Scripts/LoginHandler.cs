@@ -38,7 +38,7 @@ public class LoginHandler: MonoBehaviour
         registerButton.onClick.AddListener(Register);
 
 
-        string filePath = Application.dataPath + "/database.csv";
+        string filePath = Path.Combine(Application.persistentDataPath, "database.csv");
         StreamReader reader = new StreamReader(filePath);
         while (!reader.EndOfStream)
         {
