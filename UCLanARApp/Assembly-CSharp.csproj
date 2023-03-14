@@ -176,19 +176,23 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\ARLocation\Scripts\Components\UI\DebugInfoOverlay.cs" />
     <Compile Include="Assets\ARLocation\Experimental\World Builder\WorldBuilder.cs" />
+    <Compile Include="Assets\Colorblind Effect\Assets\Scripts\Colorblind.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ARLocation\Samples\Data\pois.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Colorblind Effect\Documentation\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\ARLocation\Data\data.xml" />
+    <None Include="Assets\Colorblind Effect\Assets\Shaders\Colorblind.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\objects.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\data.xml" />
+    <None Include="Assets\OldFilesBackups\data.xml" />
     <None Include="Assets\ARLocation\GO Map Integration\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
