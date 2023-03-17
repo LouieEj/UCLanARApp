@@ -74,6 +74,7 @@
     <Compile Include="Assets\ARLocation\Scripts\Utils\Singleton.cs" />
     <Compile Include="Assets\FloatingObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\Scripts\ARScreenHandler.cs" />
     <Compile Include="Assets\ARLocation\Mapbox Routes\Scripts\AbstractRouteSignpost.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\ARLocation\Scripts\ScriptableObjects\LocationPath.cs" />
@@ -177,7 +178,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\ARLocation\Scripts\Components\UI\DebugInfoOverlay.cs" />
     <Compile Include="Assets\ARLocation\Experimental\World Builder\WorldBuilder.cs" />
-    <Compile Include="Assets\Scripts\ARScreenHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ARLocation\Samples\Data\pois.xml" />
@@ -1027,6 +1027,18 @@
     </Reference>
     <Reference Include="Unity.XR.ARFoundation">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.003">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.003.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics">
+      <HintPath>Library\ScriptAssemblies\Unity.VectorGraphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.003">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.003.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VectorGraphics.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

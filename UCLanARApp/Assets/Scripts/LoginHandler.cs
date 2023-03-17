@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 using System.Linq;
+using ARLocation;
 
 public class LoginHandler: MonoBehaviour
 {
@@ -38,18 +39,21 @@ public class LoginHandler: MonoBehaviour
         registerButton.onClick.AddListener(Register);
 
 
-        string filePath = Path.Combine(Application.persistentDataPath, "database.csv");
-        StreamReader reader = new StreamReader(filePath);
-        while (!reader.EndOfStream)
+        TextAsset databaseTextAsset = Resources.Load<TextAsset>("database");
+        string databaseText = databaseTextAsset.text;
+        string[] databaseValues = databaseText.Split('\n');
+        for (int i = 0; i < databaseValues.Length; i++)
         {
-            string line = reader.ReadLine();
-            string[] values = line.Split(',');
-            readUsernames.Add(values[0]);
-            readPasswords.Add(values[1]);
-            readColourBlindSettings.Add(Convert.ToInt32(values[2]));
-            readDyslexicSettings.Add(Convert.ToBoolean(values[3]));
+            if (!string.IsNullOrEmpty(databaseValues[i]))
+            {
+                string line = databaseValues[i];
+                string[] values = line.Split(',');
+                readUsernames.Add(values[0]);
+                readPasswords.Add(values[1]);
+                readColourBlindSettings.Add(Convert.ToInt32(values[2]));
+                readDyslexicSettings.Add(Convert.ToBoolean(values[3]));
+            }
         }
-        reader.Close();
     }
 
 

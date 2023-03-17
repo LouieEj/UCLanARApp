@@ -27,18 +27,21 @@ public class RegisterHandler : MonoBehaviour
         registerButton.onClick.AddListener(Register);
         loginButton.onClick.AddListener(Login);
 
-        string filePath = Path.Combine(Application.persistentDataPath, "database.csv");
-        StreamReader reader = new StreamReader(filePath);
-        while (!reader.EndOfStream)
+        TextAsset databaseTextAsset = Resources.Load<TextAsset>("database");
+        string databaseText = databaseTextAsset.text;
+        string[] databaseValues = databaseText.Split('\n');
+        for (int i = 0; i < databaseValues.Length; i++)
         {
-            string line = reader.ReadLine();
-            string[] values = line.Split(',');
-            readUsernames.Add(values[0]);
-            readUsernames.Add(values[1]);
-            readColourBlindSettings.Add(Convert.ToInt32(values[2]));
-            readDyslexicSettings.Add(Convert.ToBoolean(values[3]));
+            if (!string.IsNullOrEmpty(databaseValues[i]))
+            {
+                string line = databaseValues[i];
+                string[] values = line.Split(',');
+                readUsernames.Add(values[0]);
+                readPasswords.Add(values[1]);
+                readColourBlindSettings.Add(Convert.ToInt32(values[2]));
+                readDyslexicSettings.Add(Convert.ToBoolean(values[3]));
+            }
         }
-        reader.Close();
     }
 
     private void Login()
@@ -66,19 +69,25 @@ public class RegisterHandler : MonoBehaviour
                 {
                     errorText.text = "Username already exists!";
                     errorText.enabled = true;
+                    return;
                 }
                 else if(readUsernames[i] == usernameInput.text && readPasswords[i] == passwordInput.text) //username already exists and correct password, login
                 {
                     LoginHandler.colourBlindSetting = readColourBlindSettings[i];
                     LoginHandler.dyslexicSetting = readDyslexicSettings[i];
                     SceneManager.LoadScene("HomeScreen");
+                    return;
                 }
                 else
                 {
-                    string filePath = Path.Combine(Application.persistentDataPath, "database.csv");
+                    var fileName = "database";
+                    var csvFileName = $"{fileName}.csv";
+                    string basePath = Path.Combine(Application.persistentDataPath, csvFileName);
+                    string basePath2 = Path.Combine(Application.persistentDataPath, "Resources/database.csv");
+                    StreamWriter writer = new StreamWriter(basePath, true);
+                    StreamWriter writer2 = new StreamWriter(basePath2, true);
                     string colourBlindSetting = "0";
                     string dyslexicSetting = "FALSE";
-                    StreamWriter writer = new StreamWriter(filePath, true);
                     colourBlindSetting = colourBlindDropdown.value.ToString();
                     if (dyslexicDropDown.value == 1)
                     {
@@ -87,7 +96,18 @@ public class RegisterHandler : MonoBehaviour
                     string line = usernameInput.text + "," + passwordInput.text + "," + colourBlindSetting + "," + dyslexicSetting;
                     writer.WriteLine(line);
                     writer.Close();
-                    SceneManager.LoadScene("HomeScreen");
+                    try
+                    {
+                        writer2.WriteLine(line);
+                        writer2.Close();
+                    }
+                    catch { }
+                    finally
+                    {
+                        LoginHandler.colourBlindSetting = Convert.ToInt32(colourBlindSetting);
+                        LoginHandler.dyslexicSetting = Convert.ToBoolean(dyslexicSetting);
+                        SceneManager.LoadScene("HomeScreen");
+                    }
                     break;
                 }
             }
