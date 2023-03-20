@@ -20,7 +20,7 @@ public class HomeScreenHandler : MonoBehaviour
 
     void Start()
     {
-        startButton.onClick.AddListener(() => { SceneManager.LoadScene("ARScene"); });
+        startButton.onClick.AddListener(LoadARScene);
         settingsButton.onClick.AddListener(() => { SceneManager.LoadScene("SettingsScene"); });
         logoutButton.onClick.AddListener(() => { SceneManager.LoadScene("LoginScene"); });   
         if (LoginHandler.dyslexicSetting)
@@ -31,5 +31,12 @@ public class HomeScreenHandler : MonoBehaviour
             logoutButtonText.font = dyslexicFont;
         }
         cam.GetComponent<Colorblind>().Type = LoginHandler.colourBlindSetting;
+    }
+
+    void LoadARScene()
+    {
+        Debug.Log(LoginHandler.user);
+        if (LoginHandler.user == "demo") SceneManager.LoadScene("DemoARScene");
+        else SceneManager.LoadScene("ARScene");
     }
 }

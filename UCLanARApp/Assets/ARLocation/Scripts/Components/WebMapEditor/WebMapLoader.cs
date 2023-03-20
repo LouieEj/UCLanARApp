@@ -209,8 +209,6 @@ namespace ARLocation
 
                 _dataEntries.Add(entry);
 
-                string[] locationData = { id.ToString(), lat.ToString(), lng.ToString() };
-                TextToSpeech.locations.Add(locationData);
                 Debug.Log($"{id}, {lat}, {lng}, {altitude}, {altitudeMode}, {name}, {meshId}, {movementSmoothing}, {maxNumberOfLocationUpdates}, {useMovingAverage}, {hideObjectUtilItIsPlaced}");
             }
         }
