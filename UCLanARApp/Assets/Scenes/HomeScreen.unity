@@ -1297,6 +1297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: {fileID: 652780553}
+  settingsButton: {fileID: 978758601}
   logoutButton: {fileID: 1807232422}
   homeScreenText: {fileID: 261516082}
   startButtonText: {fileID: 1142881585}

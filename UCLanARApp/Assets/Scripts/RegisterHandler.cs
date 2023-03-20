@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,26 +23,36 @@ public class RegisterHandler : MonoBehaviour
     private List<int> readColourBlindSettings = new List<int>();
     private List<bool> readDyslexicSettings = new List<bool>();
 
+
     void Start()
     {
         registerButton.onClick.AddListener(Register);
         loginButton.onClick.AddListener(Login);
 
-        TextAsset databaseTextAsset = Resources.Load<TextAsset>("database");
-        string databaseText = databaseTextAsset.text;
-        string[] databaseValues = databaseText.Split('\n');
-        for (int i = 0; i < databaseValues.Length; i++)
+        string basePath = Path.Combine(Application.persistentDataPath, "database.csv");
+        try
         {
-            if (!string.IsNullOrEmpty(databaseValues[i]))
+            string databaseText = File.ReadAllText(basePath);
+            string[] databaseValues = databaseText.Split('\n');
+            for (int i = 0; i < databaseValues.Length; i++)
             {
-                string line = databaseValues[i];
-                string[] values = line.Split(',');
-                readUsernames.Add(values[0]);
-                readPasswords.Add(values[1]);
-                readColourBlindSettings.Add(Convert.ToInt32(values[2]));
-                readDyslexicSettings.Add(Convert.ToBoolean(values[3]));
+                if (!string.IsNullOrEmpty(databaseValues[i]))
+                {
+                    string line = databaseValues[i];
+                    string[] values = line.Split(',');
+                    readUsernames.Add(values[0]);
+                    readPasswords.Add(values[1]);
+                    readColourBlindSettings.Add(Convert.ToInt32(values[2]));
+                    readDyslexicSettings.Add(Convert.ToBoolean(values[3]));
+                }
             }
         }
+        catch
+        {
+            errorText.text = "Cannot find database file in directory: " + basePath;
+            errorText.enabled = true;
+        }
+
     }
 
     private void Login()
@@ -73,6 +84,7 @@ public class RegisterHandler : MonoBehaviour
                 }
                 else if(readUsernames[i] == usernameInput.text && readPasswords[i] == passwordInput.text) //username already exists and correct password, login
                 {
+                    LoginHandler.user = usernameInput.text;
                     LoginHandler.colourBlindSetting = readColourBlindSettings[i];
                     LoginHandler.dyslexicSetting = readDyslexicSettings[i];
                     SceneManager.LoadScene("HomeScreen");
@@ -80,35 +92,31 @@ public class RegisterHandler : MonoBehaviour
                 }
                 else
                 {
-                    var fileName = "database";
-                    var csvFileName = $"{fileName}.csv";
-                    string basePath = Path.Combine(Application.persistentDataPath, csvFileName);
-                    string basePath2 = Path.Combine(Application.persistentDataPath, "Resources/database.csv");
-                    StreamWriter writer = new StreamWriter(basePath, true);
-                    StreamWriter writer2 = new StreamWriter(basePath2, true);
-                    string colourBlindSetting = "0";
-                    string dyslexicSetting = "FALSE";
-                    colourBlindSetting = colourBlindDropdown.value.ToString();
-                    if (dyslexicDropDown.value == 1)
-                    {
-                        dyslexicSetting = "TRUE";
-                    }
-                    string line = usernameInput.text + "," + passwordInput.text + "," + colourBlindSetting + "," + dyslexicSetting;
-                    writer.WriteLine(line);
-                    writer.Close();
+                    string basePath = Path.Combine(Application.persistentDataPath, "database.csv");
                     try
                     {
-                        writer2.WriteLine(line);
-                        writer2.Close();
-                    }
-                    catch { }
-                    finally
-                    {
+                        StreamWriter writer = new StreamWriter(basePath, true);
+                        string colourBlindSetting = "0";
+                        string dyslexicSetting = "FALSE";
+                        colourBlindSetting = colourBlindDropdown.value.ToString();
+                        if (dyslexicDropDown.value == 1)
+                        {
+                            dyslexicSetting = "TRUE";
+                        }
+                        string line = usernameInput.text + "," + passwordInput.text + "," + colourBlindSetting + "," + dyslexicSetting;
+                        writer.WriteLine(line);
+                        writer.Close();
+                        LoginHandler.user = usernameInput.text;
                         LoginHandler.colourBlindSetting = Convert.ToInt32(colourBlindSetting);
                         LoginHandler.dyslexicSetting = Convert.ToBoolean(dyslexicSetting);
                         SceneManager.LoadScene("HomeScreen");
+                        break;
                     }
-                    break;
+                    catch
+                    {
+                        errorText.text = "Cannot find database file in directory: " + basePath;
+                        errorText.enabled = true;
+                    }
                 }
             }
         }

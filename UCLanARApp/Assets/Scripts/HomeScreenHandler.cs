@@ -9,6 +9,7 @@ using Wilberforce;
 public class HomeScreenHandler : MonoBehaviour
 {
     [SerializeField] Button startButton;
+    [SerializeField] Button settingsButton;
     [SerializeField] Button logoutButton;
     [SerializeField] TMP_Text homeScreenText;
     [SerializeField] TMP_Text startButtonText;
@@ -20,6 +21,7 @@ public class HomeScreenHandler : MonoBehaviour
     void Start()
     {
         startButton.onClick.AddListener(() => { SceneManager.LoadScene("ARScene"); });
+        settingsButton.onClick.AddListener(() => { SceneManager.LoadScene("SettingsScene"); });
         logoutButton.onClick.AddListener(() => { SceneManager.LoadScene("LoginScene"); });   
         if (LoginHandler.dyslexicSetting)
         {

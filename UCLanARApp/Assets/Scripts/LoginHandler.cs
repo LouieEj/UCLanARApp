@@ -21,6 +21,7 @@ public class LoginHandler: MonoBehaviour
     private string password;
 
     //save this data to be accessed by other scenes
+    public static string user = "";
     public static int colourBlindSetting = 0;
     public static bool dyslexicSetting = false;
 
@@ -38,21 +39,29 @@ public class LoginHandler: MonoBehaviour
         loginButton.onClick.AddListener(Login_Attempt); //when the login button is clicked
         registerButton.onClick.AddListener(Register);
 
+        string basePath = Path.Combine(Application.persistentDataPath, "database.csv");
 
-        TextAsset databaseTextAsset = Resources.Load<TextAsset>("database");
-        string databaseText = databaseTextAsset.text;
-        string[] databaseValues = databaseText.Split('\n');
-        for (int i = 0; i < databaseValues.Length; i++)
+        try
         {
-            if (!string.IsNullOrEmpty(databaseValues[i]))
+            string databaseText = File.ReadAllText(basePath);
+            string[] databaseValues = databaseText.Split('\n');
+            for (int i = 0; i < databaseValues.Length; i++)
             {
-                string line = databaseValues[i];
-                string[] values = line.Split(',');
-                readUsernames.Add(values[0]);
-                readPasswords.Add(values[1]);
-                readColourBlindSettings.Add(Convert.ToInt32(values[2]));
-                readDyslexicSettings.Add(Convert.ToBoolean(values[3]));
+                if (!string.IsNullOrEmpty(databaseValues[i]))
+                {
+                    string line = databaseValues[i];
+                    string[] values = line.Split(',');
+                    readUsernames.Add(values[0]);
+                    readPasswords.Add(values[1]);
+                    readColourBlindSettings.Add(Convert.ToInt32(values[2]));
+                    readDyslexicSettings.Add(Convert.ToBoolean(values[3]));
+                }
             }
+        }
+        catch
+        {
+            errorText.text = "Cannot find database file in directory: " + basePath;
+            errorText.enabled = true;
         }
     }
 
@@ -89,6 +98,7 @@ public class LoginHandler: MonoBehaviour
         {
             if (readUsernames[i] == username && readPasswords[i] == password)
             {
+                user = username;
                 colourBlindSetting = readColourBlindSettings[i];
                 dyslexicSetting = readDyslexicSettings[i];
                 result = true;
