@@ -12,3 +12,6 @@
 - Location tracking sometimes not very accurate.
 - Compass tracking sometimes not very accurate (may be offset by a specific angle on boot).
 - Text-to-speech does not check where the user is, says information about university buildings in order.
+
+
+Developed by Louie, Rob, Tyler, Jay
