@@ -60,8 +60,7 @@ public class LoginHandler: MonoBehaviour
         }
         catch
         {
-            errorText.text = "Cannot find database file in directory: " + basePath;
-            errorText.enabled = true;
+            File.WriteAllText(basePath, "");
         }
     }
 
@@ -104,7 +103,7 @@ public class LoginHandler: MonoBehaviour
                 result = true;
                 break;
             }
-        }
+        }   
 
         return result;
     }

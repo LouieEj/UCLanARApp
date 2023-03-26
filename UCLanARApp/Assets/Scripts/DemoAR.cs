@@ -44,7 +44,7 @@ public class DemoAR : MonoBehaviour
         {
             if (objectCounter < objectsToLoad.Length)
             {
-                objectsToLoad[objectCounter].gameObject.transform.localScale = new Vector3(0.15f, 0.15f, 0.05f);
+                objectsToLoad[objectCounter].gameObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.1f);
                 GameObject.Instantiate(objectsToLoad[objectCounter], transform.position, transform.rotation);
                 objectCounter += 1;
             }

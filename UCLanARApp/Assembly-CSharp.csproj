@@ -60,6 +60,7 @@
     <Compile Include="Assets\ARLocation\Scripts\Components\PlaceAtLocations.cs" />
     <Compile Include="Assets\ARLocation\Scripts\Math\MathUtils.cs" />
     <Compile Include="Assets\ARLocation\Scripts\Components\ARLocationOrientation.cs" />
+    <Compile Include="Assets\Scripts\DemoAR.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\ARLocation\Mapbox Routes\Scripts\Examples\ArMenuController.cs" />
@@ -180,7 +181,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\ARLocation\Scripts\Components\UI\DebugInfoOverlay.cs" />
     <Compile Include="Assets\ARLocation\Experimental\World Builder\WorldBuilder.cs" />
-    <Compile Include="Assets\Scripts\DemoAR.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ARLocation\Samples\Data\pois.xml" />
