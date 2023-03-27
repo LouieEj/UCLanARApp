@@ -20,7 +20,7 @@ An augmented reality (AR) mobile application for Android 8.1+ devices to help UC
 - Test the app with students who would benefit from the tools in the app.
 
 ## Screenshots
-![UCLanARAppScreenshot (1)](https://user-images.githubusercontent.com/80547287/227813932-6f5691a8-eded-4270-b6fa-8768c34e6dff.jpg)
+![UCLanARAppScreenshot (1)](https://user-images.githubusercontent.com/80547287/227814273-1e0bdb25-62a2-4dc1-b437-4fb052673563.jpg)
 ![UCLanARAppScreenshot (2)](https://user-images.githubusercontent.com/80547287/227813962-994a72ab-9034-4d7d-8044-272be1f73af6.jpg)
 ![UCLanARAppScreenshot (3)](https://user-images.githubusercontent.com/80547287/227813966-77544975-013f-4f9d-9c2e-6a95e4c8d8ac.jpg)
 ![UCLanARAppScreenshot (4)](https://user-images.githubusercontent.com/80547287/227813968-67164f19-1dbd-4752-99cf-bd50ef34b08f.jpg)
