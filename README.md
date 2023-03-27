@@ -19,4 +19,4 @@ An augmented reality (AR) mobile application for Android 8.1+ devices to help UC
 - Improve the reliability of the location based AR and route navigation.
 - Test the app with students who would benefit from the tools in the app.
 
-### Developed by Louie, Rob, Tyler, Jay.
+#### Developed by Louie, Rob, Tyler, Jay.
